@@ -8,6 +8,7 @@ version = "0.1.0"
 description = "A Python library for robust data validation, serialization, and schema versioning."
 readme = "README.md"
 requires-python = ">=3.7"
+dependencies = ["PyYAML"]
 license = {text = "MIT"}
 authors = [
   {name = "Altxria Inc.", email = "company@altxria.com"}
@@ -32,12 +33,8 @@ Documentation = "https://github.com/altxriainc/janus/wiki"
 "Source Code" = "https://github.com/altxriainc/janus"
 
 [tool.setuptools]
-packages = ["altxria.janus"]
-package-dir = {"altxria.janus" = "src"}
-include-package-data = true
-
-[project.dependencies]
-"PyYAML>=6.0"
+packages = ["altxria.janus.core", "altxria.janus.utils"]
+package-dir = {"altxria.janus.core"= "src/core","altxria.janus.utils"= "src/utils"}
 
 [project.optional-dependencies]
 dev = [
