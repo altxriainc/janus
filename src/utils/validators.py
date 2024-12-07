@@ -153,3 +153,16 @@ def is_url(value):
         raise ValidationError("Value must be a string.")
     if not re.match(r"https?://[^\s/$.?#].[^\s]*", value):
         raise ValidationError("Value must be a valid URL.")
+
+# Custom Validators
+def custom_rule(callback, error_message="Validation failed."):
+    """
+    Allows users to define custom validation rules using a callback function.
+
+    :param callback: A function that takes the value and returns True/False.
+    :param error_message: The error message to display if validation fails.
+    """
+    def validator(value):
+        if not callback(value):
+            raise ValidationError(error_message)
+    return validator
