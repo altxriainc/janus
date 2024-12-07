@@ -37,7 +37,7 @@ package-dir = {"altxria.janus" = "src"}
 include-package-data = true
 
 [project.dependencies]
-PyYAML = ">=6.0"
+"PyYAML>=6.0"
 
 [project.optional-dependencies]
 dev = [
