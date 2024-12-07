@@ -8,7 +8,7 @@
 
 **Janus** is a modern Python library for data validation, serialization, and schema versioning. It provides developers with a flexible, performant, and extensible toolkit to handle input validation, data transformation, and API schema compatibility with ease.
 
-[Click here for the documentation](https://janus.altxria.com/)
+[Click here for the documentation](https://github.com/altxriainc/janus/wiki)
 
 ---
 
